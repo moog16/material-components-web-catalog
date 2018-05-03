@@ -8,7 +8,10 @@
   <head>
     <meta charset="utf-8">
     <script>
-      sessionStorage.redirect = location.href;
+      var redirect = sessionStorage.getItem('redirect');
+      redirect = JSON.parse(redirect);
+      redirect.push(window.location.href);
+      sessionStorage.setItem('redirect', JSON.stringify(redirect));
     </script>
     <meta http-equiv="refresh" content="0;URL='https://moog16.github.io/material-components-web-catalog'"></meta>
   </head>
