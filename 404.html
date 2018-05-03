@@ -9,8 +9,11 @@
     <meta charset="utf-8">
     <script>
       var redirect = sessionStorage.getItem('redirect');
-      debugger
-      redirect = JSON.parse(redirect);
+      if (!redirect) {
+        redirect = [];
+      } else {
+        redirect = JSON.parse(redirect);
+      }
       redirect.push(window.location.href);
       sessionStorage.setItem('redirect', JSON.stringify(redirect));
     </script>
