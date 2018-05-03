@@ -120,13 +120,12 @@ Then point your browser to http://localhost:3000/.
 
 ## Local Testing
 
-To run a build that can be locally tested using any HTTP server, run
+To run a build that can be locally tested using any HTTP server:
 
-```
-npm run build:local
-```
-
-Then serve the top-level repository directory, and browse to http://localhost:<port>/material-components-web-catalog/.
+1. `npm run build`
+2. Rename the `build` folder to `material-components-web-catalog`
+3. Serve the top-level repository directory (e.g. with `live-server`)
+4. Browse to http://localhost:<port>/material-components-web-catalog/
 
 ## Deployment
 
